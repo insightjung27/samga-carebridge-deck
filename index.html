@@ -90,10 +90,36 @@ html,body{height:100%;background:#0b0d10;overflow:hidden;
 .dstep .dd{font-size:17px;color:var(--body);line-height:1.42;text-align:center;padding:0 3px}
 .dstep .dd b{color:var(--ink);font-weight:800}
 .darw{display:flex;align-items:center;color:#a9b0b8;font-size:23px;font-weight:900;padding-top:22px}
+/* ---- 성장 슬라이드: 피벗 래더 단계 태그 + 현재 강조 ---- */
+.dstep .dtag{font-size:12.5px;font-weight:800;color:var(--acc);background:var(--acc-soft);border:1px solid var(--acc-line);border-radius:999px;padding:3px 12px}
+.dstep.cur .dtag{color:#fff;background:var(--charcoal);border-color:var(--charcoal)}
+.dflow.pl{gap:10px}
+.dflow.pl .dstep{gap:9px}
+.dflow.pl .dh{padding:14px 9px;font-size:18px}
+.dflow.pl .dd{font-size:16.5px;line-height:1.36}
+.dflow.pl .darw{padding-top:30px}
+/* ---- 성장 레버 4 (곱셈 축) ---- */
+.subhd{text-align:center;font-size:17px;font-weight:800;color:var(--acc);margin-bottom:10px;letter-spacing:-.005em}
+.levers{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1180px;margin:0 auto}
+.lever{border:1px solid #e6e9ee;border-radius:12px;padding:13px 15px;background:#fff;box-shadow:0 3px 12px rgba(30,35,45,.05);min-width:0}
+.lever.rep{border-color:var(--acc-line);background:var(--acc-soft)}
+.lever .lhead{display:flex;align-items:center;gap:9px;margin-bottom:6px}
+.lever .ln{flex:none;background:var(--acc);color:#fff;font-weight:800;font-size:13px;border-radius:999px;width:24px;height:24px;display:flex;align-items:center;justify-content:center}
+.lever .lh{font-size:19px;font-weight:800;color:var(--ink);line-height:1.16}
+.lever.rep .lh{color:var(--acc)}
+.lever .lt{font-size:16.5px;color:var(--body);line-height:1.36}
+.lever .lt b{color:var(--acc);font-weight:800}
+/* 트래픽 되먹임 캡션 */
+.loopcap{font-size:18px;color:var(--gray);text-align:center;margin-top:8px;line-height:1.45}
+.loopcap b{color:var(--acc);font-weight:800}
+/* ---- 위상 캡션(쐐기 증명) — 화면1·화면3 상단 ---- */
+.phase{display:inline-flex;align-items:center;gap:10px;margin-top:8px;font-size:18px;font-weight:700;color:var(--acc);background:var(--acc-soft);border:1px solid var(--acc-line);border-radius:999px;padding:8px 18px;line-height:1.3;text-align:left}
+.phase b{font-weight:800}
+.phase .pt{flex:none;background:var(--acc);color:#fff;font-size:13px;font-weight:800;border-radius:6px;padding:4px 10px;letter-spacing:.02em}
 /* ============ HI-FI MOCKUP (개념·가상 데이터) ============ */
 .app{margin:0 auto;max-width:1176px;border:1px solid var(--cardln);border-radius:16px;overflow:hidden;
   box-shadow:0 14px 44px rgba(30,40,60,.12);background:#fff}
-.appbar{display:flex;align-items:center;gap:12px;background:var(--dark);color:#eef1f5;padding:13px 20px}
+.appbar{display:flex;align-items:center;gap:12px;background:var(--dark);color:#eef1f5;padding:11px 20px}
 .appbar .dots{display:flex;gap:6px}
 .appbar .dots i{width:10px;height:10px;border-radius:50%;background:#4a515b;display:block}
 .appbar .abt{font-size:16px;font-weight:800;letter-spacing:-.01em}
@@ -101,7 +127,7 @@ html,body{height:100%;background:#0b0d10;overflow:hidden;
 .appbar .sp{flex:1}
 .appbar .concept{font-size:12.5px;font-weight:800;color:#0b0d10;background:#c9d6e6;border-radius:6px;padding:5px 11px;letter-spacing:.02em}
 /* progress rail */
-.rail{display:flex;align-items:center;background:#f7f9fb;border-bottom:1px solid var(--cardln);padding:8px 22px;gap:0}
+.rail{display:flex;align-items:center;background:#f7f9fb;border-bottom:1px solid var(--cardln);padding:6px 22px;gap:0}
 .rseg{flex:1;display:flex;align-items:center;justify-content:center;gap:9px;position:relative}
 .rseg .rn{width:24px;height:24px;border-radius:50%;background:#dfe4ea;color:#6a717a;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none}
 .rseg .rl{font-size:15.5px;font-weight:700;color:#7c828b}
@@ -113,13 +139,13 @@ html,body{height:100%;background:#0b0d10;overflow:hidden;
 /* mock body */
 .amain{display:grid;gap:0}
 .amain.c1{grid-template-columns:0.86fr 1.14fr}
-.pane{padding:13px 20px}
+.pane{padding:10px 20px}
 .pane+.pane{border-left:1px solid var(--cardln)}
 .ptitle{font-size:16px;font-weight:800;color:var(--ink);margin-bottom:9px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
 .ptag{font-size:12px;font-weight:800;color:#fff;background:var(--charcoal);border-radius:5px;padding:3px 9px}
 .ptag.a{background:var(--acc)}
 /* 정책 라이브러리 */
-.libitem{display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid #eef0f3}
+.libitem{display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #eef0f3}
 .libitem:last-child{border-bottom:0}
 .libitem .rel{flex:none;width:58px;font-size:16px;font-weight:800;color:var(--ink)}
 .tgls{display:flex;gap:6px;flex-wrap:wrap}
@@ -161,21 +187,21 @@ html,body{height:100%;background:#0b0d10;overflow:hidden;
 .amain.flowdemo{position:relative}
 .xfer{position:absolute;top:53%;left:43%;transform:translate(-50%,-50%);z-index:5;background:var(--acc);color:#fff;border-radius:999px;padding:9px 15px;font-size:13px;font-weight:800;box-shadow:0 8px 20px rgba(47,77,110,.30);display:flex;align-items:center;gap:7px;white-space:nowrap}
 .xfer .xa{font-size:16px;font-weight:900}
-.msgcaps{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:1176px;margin:9px auto 0}
-.mcap{display:flex;align-items:center;gap:12px;background:var(--acc-soft);border-left:6px solid var(--acc);border-radius:11px;padding:10px 18px}
+.msgcaps{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:1176px;margin:6px auto 0}
+.mcap{display:flex;align-items:center;gap:12px;background:var(--acc-soft);border-left:6px solid var(--acc);border-radius:11px;padding:8px 16px}
 .mcap .mci{flex:none;background:var(--acc);color:#fff;font-size:13px;font-weight:900;border-radius:7px;padding:6px 11px;letter-spacing:.02em}
 .mcap .mct{font-size:19.5px;color:var(--ink2);font-weight:600;line-height:1.34}
 .mcap .mct b{color:var(--acc);font-weight:800}
 /* ============ REPORT MOCK ============ */
-.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:20px 22px 4px}
-.kpi{border:1px solid #e6e9ee;border-radius:12px;padding:16px 18px;background:#fbfcfd}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:14px 22px 4px}
+.kpi{border:1px solid #e6e9ee;border-radius:12px;padding:13px 18px;background:#fbfcfd}
 .kpi .kl{font-size:14px;font-weight:700;color:#7c828b;line-height:1.3}
 .kpi .kv{font-size:29px;font-weight:900;color:var(--ink);margin-top:8px;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
 .kpi .ks{font-size:12.5px;font-weight:700;color:#9aa1a9;margin-top:3px}
 .kpi.hot{border-color:var(--acc-line);background:var(--acc-soft)}
 .kpi.hot .kv{color:var(--acc)}
 .kpi.hot .kl{color:var(--acc)}
-.rmain{display:grid;grid-template-columns:1.28fr 1fr;gap:0;border-top:1px solid var(--cardln);margin-top:16px}
+.rmain{display:grid;grid-template-columns:1.28fr 1fr;gap:0;border-top:1px solid var(--cardln);margin-top:10px}
 .rtbl{width:100%;border-collapse:separate;border-spacing:0}
 .rtbl th,.rtbl td{font-size:14.5px;text-align:center;padding:11px 8px;color:var(--ink2)}
 .rtbl th{background:#f2f5f8;font-weight:800;color:var(--ink);font-size:13.5px}
@@ -186,7 +212,7 @@ html,body{height:100%;background:#0b0d10;overflow:hidden;
 .stpill.acc{background:#e6ecf2;color:#3d6088}
 .stpill.done{background:var(--acc);color:#fff}
 .stpill.exc{background:#f4f5f7;color:#9aa1a9;border:1px dashed #cfd5dc}
-.costp{padding:18px 22px}
+.costp{padding:14px 22px}
 .costp .cl{font-size:14px;font-weight:800;color:var(--ink);margin-bottom:11px}
 .crow{display:flex;justify-content:space-between;align-items:center;font-size:14.5px;padding:7px 0;border-bottom:1px dashed #e6e9ee}
 .crow .cn{color:var(--body)}
@@ -196,7 +222,7 @@ html,body{height:100%;background:#0b0d10;overflow:hidden;
 .crow.total .cn{font-weight:800;color:var(--acc)}
 .crow.total .cv{color:var(--acc);font-size:18px}
 /* formula */
-.formula{margin:20px auto 0;max-width:1176px;background:var(--charcoal2);color:#eef0f2;border-radius:12px;padding:20px 28px;font-size:20px;text-align:center;line-height:1.5;letter-spacing:-.005em}
+.formula{margin:12px auto 0;max-width:1176px;background:var(--charcoal2);color:#eef0f2;border-radius:12px;padding:15px 28px;font-size:20px;text-align:center;line-height:1.5;letter-spacing:-.005em}
 .formula b{color:#bcd0e8;font-weight:800}
 .wcap{font-size:19px;color:var(--gray);text-align:center;margin-top:16px;line-height:1.45}
 .wcap b{color:var(--body);font-weight:700}
@@ -319,8 +345,9 @@ html,body{height:100%;background:#0b0d10;overflow:hidden;
     <div class="eyebrow">개념 목업 · <b>가상 데이터</b> · 실제 화면 아님</div>
     <div class="headline sm">HR 케이스·정책 콘솔 — <span class="acc">왜 그룹웨어가 아닌가</span></div>
     <div class="purpose">기업 HR 담당자 화면 — 회사 경조 규정을 <b>‘설정’</b>해두면 직원 경조 건이 <b>규정대로 자동 구성</b>됩니다.</div>
+    <div class="phase"><span class="pt">쐐기 증명</span>이건 쐐기의 <b>차별화·단위경제 증명</b>입니다 — 사업 전체가 아니라 <b>첫 발판</b>.</div>
   </div>
-  <div class="body" style="margin-top:8px">
+  <div class="body" style="margin-top:3px">
     <div class="app">
       <div class="appbar"><span class="dots"><i></i><i></i><i></i></span><span class="abt">Care Bridge · <b>HR 케이스·정책 콘솔</b></span><span class="sp"></span><span class="concept">CONCEPT · 가상 데이터</span></div>
       <div class="railzone"><span class="zn3">3</span>진행 단계 — 이 한 건이 지금 어디까지 왔는지</div>
@@ -373,8 +400,9 @@ html,body{height:100%;background:#0b0d10;overflow:hidden;
   <div class="tw">
     <div class="eyebrow">개념 목업 · <b>가상 데이터</b> · 실제 화면 아님</div>
     <div class="headline sm">이행·정산·기업 리포트 — <span class="acc">기업이 왜 돈 내나</span></div>
+    <div class="phase"><span class="pt">쐐기 증명</span>이건 쐐기의 <b>차별화·단위경제 증명</b>입니다 — 사업 전체가 아니라 <b>첫 발판</b>.</div>
   </div>
-  <div class="body" style="margin-top:16px">
+  <div class="body" style="margin-top:6px">
     <div class="app">
       <div class="appbar"><span class="dots"><i></i><i></i><i></i></span><span class="abt">Care Bridge · <b>기업 리포트</b></span><span class="sp"></span><span class="concept">CONCEPT · 가상 데이터</span></div>
       <div class="kpis">
@@ -410,7 +438,38 @@ html,body{height:100%;background:#0b0d10;overflow:hidden;
   </div>
 </section>
 
-<!-- 6 · 90일 검증·Stop + 각주 -->
+<!-- 6 · 성장 시나리오 · 쐐기 → 피벗 → 확장 -->
+<section class="slide">
+  <div class="hd"><span class="sec">성장 · 쐐기 → 피벗 → 확장</span><span class="pg"></span></div>
+  <div class="tw">
+    <div class="eyebrow">성장 시나리오 · 모든 수치 <b>가상 · 검증 전 가정</b></div>
+    <div class="headline sm">성장은 어디서 오나 — <span class="acc">쐐기 → 피벗 → 확장</span></div>
+    <div class="purpose">지금은 규모가 작은 <b>쐐기</b> — 케이스당 공헌이익 <b>₩18,600(가상)</b>·저빈도. 규모는 작지만 여기서 단위경제를 증명하고 <b>채널·데이터를 확보</b>해 시작합니다.</div>
+  </div>
+  <div class="body" style="margin-top:12px">
+    <div class="subhd">성장 레버 4 — 어디를 곱하면 커지나</div>
+    <div class="levers" style="margin-bottom:16px">
+      <div class="lever"><div class="lhead"><span class="ln">1</span><div class="lh">계약기업 수</div></div><div class="lt">B2B 로고 <b>가로 확장</b></div></div>
+      <div class="lever"><div class="lhead"><span class="ln">2</span><div class="lh">사(社)당 커버 임직원</div></div><div class="lt">한 계약 안 <b>세로 침투</b></div></div>
+      <div class="lever rep"><div class="lhead"><span class="ln">3</span><div class="lh">White-label 채널</div></div><div class="lt">복지대행·보험 = <b>유통 곱셈</b></div></div>
+      <div class="lever rep"><div class="lhead"><span class="ln">4</span><div class="lh">추모·안치 구독</div></div><div class="lt">반복 트래픽 · <b>LTV</b></div></div>
+    </div>
+    <div class="subhd">피벗 래더 — 같은 고객·데이터·채널 재사용</div>
+    <div class="dflow pl" style="margin-bottom:8px">
+      <div class="dstep cur"><span class="dtag">쐐기 · 지금</span><div class="dh">기업 경조 이행</div><div class="dd">단위경제 증명 · <b>채널·데이터 확보</b></div></div>
+      <div class="darw">→</div>
+      <div class="dstep"><span class="dtag">피벗</span><div class="dh">White-label 채널로 매출 확대</div><div class="dd">복지대행·보험 = <b>유통 곱셈</b></div></div>
+      <div class="darw">→</div>
+      <div class="dstep"><span class="dtag">피벗</span><div class="dh">임직원·유족 생애 케어</div><div class="dd"><b>「그 다음」 재접속</b> · 반복 접점</div></div>
+      <div class="darw">→</div>
+      <div class="dstep end"><span class="dtag">확장</span><div class="dh">부고 트래픽 기반 추모·안치 구독</div><div class="dd">반복 트래픽 · <b>LTV</b></div></div>
+    </div>
+    <div class="loopcap"><b>트래픽 되먹임</b> — B2B 계약 → 커버 임직원 → 케이스 → 유족 접점 → <b>삼가 추모·사후 재방문(반복)</b></div>
+    <div class="paybar" style="margin-top:14px"><span class="tag">재프레이밍</span><span class="t"><b>운영 대시보드가 아니라</b>, 삼가의 장례 자산을 <b>‘기업 복지’라는 새 구매자</b>에게 파는 첫 쐐기 — 채널·상품·고객으로 <b>여러 번 피벗해 매출·트래픽을 키우는 사업의 시작</b>입니다.</span></div>
+  </div>
+</section>
+
+<!-- 7 · 90일 검증·Stop + 각주 -->
 <section class="slide">
   <div class="hd"><span class="sec">90일 검증 · Stop · 각주</span><span class="pg"></span></div>
   <div class="tw">
