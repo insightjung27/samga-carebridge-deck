@@ -112,6 +112,16 @@ html,body{height:100%;background:#0b0d10;overflow:hidden;
 /* 트래픽 되먹임 캡션 */
 .loopcap{font-size:18px;color:var(--gray);text-align:center;margin-top:8px;line-height:1.45}
 .loopcap b{color:var(--acc);font-weight:800}
+/* ---- 성장(6P) 단순화: 피벗 래더 HERO + 레버 한 줄 + 축소 캡션 ---- */
+.dflow.hero{gap:15px;margin-bottom:18px}
+.dflow.hero .dstep{gap:14px}
+.dflow.hero .dh{padding:24px 16px;font-size:23px;border-radius:14px;line-height:1.26;min-height:112px;display:flex;align-items:center;justify-content:center}
+.dflow.hero .dd{font-size:19px;line-height:1.44}
+.dflow.hero .dtag{font-size:14px;padding:4px 14px}
+.dflow.hero .darw{padding-top:38px;font-size:28px}
+.leverline{text-align:center;font-size:18.5px;color:var(--body);margin-top:2px;line-height:1.5}
+.leverline b{color:var(--acc);font-weight:800}
+.loopcap.small{font-size:15.5px;margin-top:10px;color:var(--gray)}
 /* ---- 위상 캡션(쐐기 증명) — 화면1·화면3 상단 ---- */
 .phase{display:inline-flex;align-items:center;gap:10px;margin-top:8px;font-size:18px;font-weight:700;color:var(--acc);background:var(--acc-soft);border:1px solid var(--acc-line);border-radius:999px;padding:8px 18px;line-height:1.3;text-align:left}
 .phase b{font-weight:800}
@@ -344,8 +354,7 @@ html,body{height:100%;background:#0b0d10;overflow:hidden;
   <div class="tw">
     <div class="eyebrow">개념 목업 · <b>가상 데이터</b> · 실제 화면 아님</div>
     <div class="headline sm">HR 케이스·정책 콘솔 — <span class="acc">왜 그룹웨어가 아닌가</span></div>
-    <div class="purpose">기업 HR 담당자 화면 — 회사 경조 규정을 <b>‘설정’</b>해두면 직원 경조 건이 <b>규정대로 자동 구성</b>됩니다.</div>
-    <div class="phase"><span class="pt">쐐기 증명</span>이건 쐐기의 <b>차별화·단위경제 증명</b>입니다 — 사업 전체가 아니라 <b>첫 발판</b>.</div>
+    <div class="purpose">회사 규정을 <b>‘설정’</b>해두면 실제 경조 건이 <b>규정대로 자동 구성</b> — 코드가 아니라 설정, 기능이 아니라 <b>Case 단위</b>.</div>
   </div>
   <div class="body" style="margin-top:3px">
     <div class="app">
@@ -363,7 +372,7 @@ html,body{height:100%;background:#0b0d10;overflow:hidden;
           <div class="zlab"><span class="zn">1</span>회사 규정 (설정)</div>
           <div class="ptitle">정책 라이브러리 <span class="ptag a">설정 · No-code</span></div>
           <div class="libitem"><span class="rel">배우자</span><div class="tgls"><span class="tgl on">근조화환</span><span class="tgl on">장례물품</span><span class="tgl on">안내</span></div></div>
-          <div class="libitem match"><span class="rel">부모</span><div class="tgls"><span class="tgl on">근조화환</span><span class="tgl on">장례물품</span><span class="tgl on">안내</span></div><span class="mtag">이 건에 적용 →</span></div>
+          <div class="libitem match"><span class="rel">부모</span><div class="tgls"><span class="tgl on">근조화환</span><span class="tgl on">장례물품</span><span class="tgl on">안내</span></div></div>
           <div class="libitem"><span class="rel">자녀</span><div class="tgls"><span class="tgl on">근조화환</span><span class="tgl on">장례물품</span><span class="tgl on">안내</span></div></div>
           <div class="libitem"><span class="rel">형제</span><div class="tgls"><span class="tgl on">근조화환</span><span class="tgl off">장례물품</span><span class="tgl on">안내</span></div></div>
           <div class="libitem"><span class="rel">배우자<br>부모</span><div class="tgls"><span class="tgl on">근조화환</span><span class="tgl off">장례물품</span><span class="tgl on">안내</span></div></div>
@@ -386,10 +395,6 @@ html,body{height:100%;background:#0b0d10;overflow:hidden;
           </div>
         </div>
       </div>
-    </div>
-    <div class="msgcaps">
-      <div class="mcap"><span class="mci">핵심 1</span><span class="mct">회사마다 다른 규정을 <b>코드가 아니라 설정</b>으로</span></div>
-      <div class="mcap"><span class="mci">핵심 2</span><span class="mct">흩어진 기능이 아니라 <b>한 건(Case)으로 묶음</b> = 왜 그룹웨어가 아닌가</span></div>
     </div>
   </div>
 </section>
@@ -444,27 +449,21 @@ html,body{height:100%;background:#0b0d10;overflow:hidden;
   <div class="tw">
     <div class="eyebrow">성장 시나리오 · 모든 수치 <b>가상 · 검증 전 가정</b></div>
     <div class="headline sm">성장은 어디서 오나 — <span class="acc">쐐기 → 피벗 → 확장</span></div>
-    <div class="purpose">지금은 규모가 작은 <b>쐐기</b> — 케이스당 공헌이익 <b>₩18,600(가상)</b>·저빈도. 규모는 작지만 여기서 단위경제를 증명하고 <b>채널·데이터를 확보</b>해 시작합니다.</div>
+    <div class="purpose">지금은 작은 <b>쐐기</b> — 케이스당 <b>₩18,600</b>·저빈도. 성장은 아래 피벗에서.</div>
   </div>
-  <div class="body" style="margin-top:12px">
-    <div class="subhd">성장 레버 4 — 어디를 곱하면 커지나</div>
-    <div class="levers" style="margin-bottom:16px">
-      <div class="lever"><div class="lhead"><span class="ln">1</span><div class="lh">계약기업 수</div></div><div class="lt">B2B 로고 <b>가로 확장</b></div></div>
-      <div class="lever"><div class="lhead"><span class="ln">2</span><div class="lh">사(社)당 커버 임직원</div></div><div class="lt">한 계약 안 <b>세로 침투</b></div></div>
-      <div class="lever rep"><div class="lhead"><span class="ln">3</span><div class="lh">White-label 채널</div></div><div class="lt">복지대행·보험 = <b>유통 곱셈</b></div></div>
-      <div class="lever rep"><div class="lhead"><span class="ln">4</span><div class="lh">추모·안치 구독</div></div><div class="lt">반복 트래픽 · <b>LTV</b></div></div>
-    </div>
-    <div class="subhd">피벗 래더 — 같은 고객·데이터·채널 재사용</div>
-    <div class="dflow pl" style="margin-bottom:8px">
+  <div class="body" style="margin-top:16px">
+    <div class="subhd" style="font-size:19px;margin-bottom:14px">피벗 래더 — 같은 고객·데이터·채널 재사용</div>
+    <div class="dflow hero">
       <div class="dstep cur"><span class="dtag">쐐기 · 지금</span><div class="dh">기업 경조 이행</div><div class="dd">단위경제 증명 · <b>채널·데이터 확보</b></div></div>
       <div class="darw">→</div>
-      <div class="dstep"><span class="dtag">피벗</span><div class="dh">White-label 채널로 매출 확대</div><div class="dd">복지대행·보험 = <b>유통 곱셈</b></div></div>
+      <div class="dstep"><span class="dtag">피벗</span><div class="dh">White-label 채널</div><div class="dd">복지대행·보험 = <b>유통 곱셈</b></div></div>
       <div class="darw">→</div>
       <div class="dstep"><span class="dtag">피벗</span><div class="dh">임직원·유족 생애 케어</div><div class="dd"><b>「그 다음」 재접속</b> · 반복 접점</div></div>
       <div class="darw">→</div>
-      <div class="dstep end"><span class="dtag">확장</span><div class="dh">부고 트래픽 기반 추모·안치 구독</div><div class="dd">반복 트래픽 · <b>LTV</b></div></div>
+      <div class="dstep end"><span class="dtag">확장</span><div class="dh">부고 트래픽 추모·안치 구독</div><div class="dd">반복 트래픽 · <b>LTV</b></div></div>
     </div>
-    <div class="loopcap"><b>트래픽 되먹임</b> — B2B 계약 → 커버 임직원 → 케이스 → 유족 접점 → <b>삼가 추모·사후 재방문(반복)</b></div>
+    <div class="leverline">성장 레버 — 계약기업 수 · 사(社)당 커버 임직원 · <b>White-label 채널</b> · <b>추모·안치 구독</b></div>
+    <div class="loopcap small">트래픽 되먹임 — 계약 → 커버 임직원 → 케이스 → 유족 접점 → <b>삼가 추모·재방문(반복)</b></div>
     <div class="paybar" style="margin-top:14px"><span class="tag">재프레이밍</span><span class="t"><b>운영 대시보드가 아니라</b>, 삼가의 장례 자산을 <b>‘기업 복지’라는 새 구매자</b>에게 파는 첫 쐐기 — 채널·상품·고객으로 <b>여러 번 피벗해 매출·트래픽을 키우는 사업의 시작</b>입니다.</span></div>
   </div>
 </section>
